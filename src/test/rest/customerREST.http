@@ -1,0 +1,38 @@
+# Create
+POST http://localhost:8080/HelloMVC_war_exploded/apis/customers
+Content-Type: application/json
+
+{
+  "id": 211,
+  "name": "하늘",
+  "address": "서울 특별시",
+  "email": "likemin0142@naver.com"
+}
+### Update
+PUT http://localhost:8080/HelloMVC_war_exploded/apis/customers
+Content-Type: application/json
+
+{
+  "id": 211,
+  "name": "땅",
+  "address": "부산 광역시",
+  "email": "likemin0142@gmail.com"
+}
+### Read 1 get customer by id
+GET http://localhost:8080/HelloMVC_war_exploded/apis/customers/15
+Accept: application/json
+### Read 2 get List of customers by names
+GET http://localhost:8080/HelloMVC_war_exploded/apis/customers/name?name=김경자
+Accept: application/json
+### Read 3 get List of customers by address
+GET http://localhost:8080/HelloMVC_war_exploded/apis/customers/address?address=미국
+Accept: application/json
+### Read 4 get List of customers by orders
+GET http://localhost:8080/HelloMVC_war_exploded/apis/customers/400/orders
+Accept: application/json
+### Read 5 get List of all customers
+GET http://localhost:8080/HelloMVC_war_exploded/apis/customers
+Accept: application/json
+### Delete
+DELETE  http://localhost:8080/HelloMVC_war_exploded/apis/customers/103
+###

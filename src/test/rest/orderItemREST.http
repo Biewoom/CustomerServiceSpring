@@ -1,0 +1,37 @@
+### Create
+POST http://localhost:8080/HelloMVC_war_exploded/apis/orderItems
+Content-Type: application/json
+
+{
+ "id": 100,
+  "amount": 400,
+  "product":
+  {
+    "id": 5
+  }
+}
+### Update
+PUT http://localhost:8080/HelloMVC_war_exploded/apis/orderItems
+Content-Type: application/json
+
+{
+  "id": 107,
+  "amount": 50,
+  "product":
+  {
+    "id": 3
+  }
+}
+### Read 1 a orderItem by id
+GET http://localhost:8080/HelloMVC_war_exploded/apis/orderItems/20
+Accept: application/json
+### Read 2 List of all orderItems
+GET http://localhost:8080/HelloMVC_war_exploded/apis/orderItems
+Accept: application/json
+### Read 3 List of orderItems by product
+GET http://localhost:8080/HelloMVC_war_exploded/apis/orderItems/product/2
+Accept: application/json
+### delete
+DELETE http://localhost:8080/HelloMVC_war_exploded/apis/orderItem/106
+###
+

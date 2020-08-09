@@ -1,0 +1,28 @@
+### Create
+POST http://localhost:8080/HelloMVC_war_exploded/apis/products
+Content-Type: application/json
+
+{
+ "id": 100,
+  "name": "땅땅 치킨",
+  "price": 26000,
+  "description": "신메뉴 출시!"
+}
+### Update
+PUT http://localhost:8080/HelloMVC_war_exploded/apis/products
+Content-Type: application/json
+
+{
+ "id": 3,
+ "name": "롯데 리아",
+  "price": 13000,
+  "description": "버거 접습니다."
+}
+### Read 1 Get product by id
+GET http://localhost:8080/HelloMVC_war_exploded/apis/products/1
+Content-Type: application/json
+### Read 2 Get List of Products
+GET http://localhost:8080/HelloMVC_war_exploded/apis/products
+Content-Type: application/json
+### Delete
+DELETE http://localhost:8080/HelloMVC_war_exploded/apis/products/1

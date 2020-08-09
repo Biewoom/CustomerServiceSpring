@@ -1,0 +1,75 @@
+### Create
+POST http://localhost:8080/HelloMVC_war_exploded/apis/orders
+Content-Type: application/json
+
+{
+  "id": 7,
+  "orderDate": "2200-07-25T13:33:03.969Z",
+  "customer":
+  {
+    "id": 105
+  } ,
+  "items":
+  [
+    {
+      "id": 200,
+      "amount": 50,
+      "product":
+      {
+        "id": 1
+      }
+    },
+    {
+      "id": 201,
+      "amount": 50,
+      "product":
+      {
+        "id": 1
+      }
+    }
+  ]
+}
+
+### Read 1 Read order
+GET http://localhost:8080/HelloMVC_war_exploded/apis/orders/100
+Accept: application/json
+### Read 2 List of all orders
+GET http://localhost:8080/HelloMVC_war_exploded/apis/orders
+Accept: application/json
+### Read 3 List of my own orderItems
+GET http://localhost:8080/HelloMVC_war_exploded/apis/orders/4/orderItems
+Accept: application/json
+### Read 4 Read my customer
+GET http://localhost:8080/HelloMVC_war_exploded/apis/orders/2/customer
+Accept: application/json
+### Update
+PUT http://localhost:8080/HelloMVC_war_exploded/apis/orders
+Content-Type: application/json
+
+{
+  "id": 4,
+  "orderDate": "2100-07-04T13:33:03.969Z",
+  "customer":
+  {
+    "id": 21
+  } ,
+  "items":
+          [
+            {
+              "id": 33,
+              "amount": 50,
+              "product": {
+                "id": 3
+              }
+            },
+             {
+               "id": 12,
+               "amount": 500,
+               "product": {
+                "id": 5
+               }
+             }
+          ]
+}
+### Delete
+DELETE http://localhost:8080/HelloMVC_war_exploded/apis/orders/10
